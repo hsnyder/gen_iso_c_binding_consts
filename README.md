@@ -1,5 +1,5 @@
 # gen_iso_c_binding_consts
-A simple C program to generate numerical values (corresponding to byte counts) for fortran's iso_c_binding kind constants
+A simple C program to generate numerical values (corresponding to byte counts) for Fortran's iso_c_binding kind constants
 
 Example output on x86_64 Linux, using gcc 9.0.3:
 

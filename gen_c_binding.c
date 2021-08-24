@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stddef.h>
+#include <string.h>
 
 
 #define CTYPELIST \
@@ -46,9 +47,10 @@
 int main(int argc, char ** argv)
 {
 
-	
+	int divisor = 1;	
 #define _X(a,b) \
-	printf("integer, parameter :: %s = %zu\n", a, sizeof(b));
+	divisor = strstr(a,"complex") == NULL ? 1 : 2; \
+	printf("integer, parameter :: %s = %zu\n", a, sizeof(b)/divisor);
 
 	CTYPELIST
 

@@ -2,6 +2,8 @@
 A simple C program to generate numerical values (corresponding to byte counts) for Fortran's iso_c_binding kind constants.
 The values for complex types are half the number of bytes used by the type, rather than the full number of bytes.
 
+This is probably not useful unless you are writing a Fortran compiler and have decided upon the convention whereby the numeric constant corresponding to a given kind is equal to the number of bytes occupied by that kind.
+
 Example output on x86_64 Linux, using gcc 9.3.0
 
 ```

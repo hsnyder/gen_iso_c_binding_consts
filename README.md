@@ -1,7 +1,8 @@
 # gen_iso_c_binding_consts
-A simple C program to generate numerical values (corresponding to byte counts) for Fortran's iso_c_binding kind constants
+A simple C program to generate numerical values (corresponding to byte counts) for Fortran's iso_c_binding kind constants.
+The values for complex types are half the number of bytes used by the type, rather than the full number of bytes.
 
-Example output on x86_64 Linux, using gcc 9.0.3:
+Example output on x86_64 Linux, using gcc 9.3.0
 
 ```
 integer, parameter :: c_int = 4
@@ -28,9 +29,9 @@ integer, parameter :: c_ptrdiff_t = 8
 integer, parameter :: c_float = 4
 integer, parameter :: c_double = 8
 integer, parameter :: c_long_double = 16
-integer, parameter :: c_float_complex = 8
-integer, parameter :: c_double_complex = 16
-integer, parameter :: c_long_double_complex = 32
+integer, parameter :: c_float_complex = 4
+integer, parameter :: c_double_complex = 8
+integer, parameter :: c_long_double_complex = 16
 integer, parameter :: c_bool = 1
 integer, parameter :: c_char = 1
 ```
